@@ -1,5 +1,4 @@
 name: Development workflow
-
 on:
   pull_request:
     branches:
@@ -10,17 +9,17 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-      - name: Checkout code
+      - name: --checkout code--
         uses: actions/checkout@v1
 
-      - name: Use Node JS
+      - name: --use Node JS--
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - run: npm install
       - run: npm run build --if-present
 
-      - name: Deploy to Netlify
+      - name: --deploy--
         uses: netlify/actions/cli@master
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
