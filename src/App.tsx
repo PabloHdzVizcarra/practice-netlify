@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <p>Branch main</p>
+      <p>Branch dev deploy netlify</p>
     </div>
   );
 }
